@@ -30,6 +30,7 @@ public class SkiJump {
         }
     }
     
+    @Override
     public String toString() {
         return "length: " + this.length + "\n" + "judge votes: " + this.votes;
     } 
@@ -58,25 +59,17 @@ public class SkiJump {
     
     public int smallestInArray(int[] array) {
         int smallest = array[0];
-        
-        for (int i = 1; i < array.length; i++) {
-            if (array[i] < smallest) {
-                smallest = array[i];
-            }
+        for (int value : array) {
+            smallest = Math.min(smallest,value);
         }
-        
         return smallest;
     }
     
-    public int LargestInArray(int[] array) {
+    public int largestInArray(int[] array) {
         int largest = array[0];
-        
-        for (int i = 1; i < array.length; i++) {
-            if (array[i] > largest) {
-                largest = array[i];
-            }
+        for (int value : array) {
+            largest = Math.max(largest,value);
         }
-        
         return largest;
-    }    
+    }  
 }
