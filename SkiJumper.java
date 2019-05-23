@@ -48,16 +48,16 @@ public class SkiJumper implements Comparable<SkiJumper> {
         return score;
     }
     
-    public int compareTo(SkiJumper skiJumper) {
-        if (this.wholeScore() > skiJumper.wholeScore()) {
-            return 1;
-        }
-        if (this.wholeScore() < skiJumper.wholeScore()) {
-            return -1;
-        }
-
-        return 0;
+    // YOu are using comparable incorrectly...See below for better implementation....
+    public int compsreTo(SkiJumper skiJumper) {
+    if (this.wholeScore().compareTo(skiJumper.wholeScore() > 0) {
+        // do something here
+    } else if (this.wholeScore().compareTo(skiJumper.wholeScore() < 0) {
+        // do something here
+    } else {
+       // do something here...
     }
+}
     
     public String achievedLengths() {
         String lengths = "";
