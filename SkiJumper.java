@@ -49,14 +49,13 @@ public class SkiJumper implements Comparable<SkiJumper> {
     }
     
     public int compareTo(SkiJumper skiJumper) {
-        if (this.wholeScore() > skiJumper.wholeScore()) {
+        if (this.wholeScore().compareTo(skiJumper.wholeScore()) > 0) {
             return 1;
-        }
-        if (this.wholeScore() < skiJumper.wholeScore()) {
+        } else if (this.wholeScore().compareTo(skiJumper.wholeScore()) < 0) {
             return -1;
+        } else {
+            return 0;
         }
-
-        return 0;
     }
     
     public String achievedLengths() {
